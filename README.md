@@ -235,7 +235,7 @@ $$
 \rm{y}_t^* = \Phi e ^{\Omega t} \rm{b} = \sum_{k=1}^{r} \phi_k e^{\omega_k t}b_k.
 $$
 
-Finally, reconstructed measurement $\vec\mathbf{x}^*$ can be transformed from the observables using inverse observation function $g^{-1}$:
+Finally, reconstructed measurement $\vec\mathbf{x}^*$ can be transformed from the observables $\vec\mathbf{y}^*$ using inverse observation function $g^{-1}$:
 
 $$
 \vec\mathbf{y}^* = g(\vec\mathbf{x}^*) \rarr \vec\mathbf{x}^* = g^{-1}(\vec\mathbf{y})^*.
