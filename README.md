@@ -29,7 +29,7 @@ where $A$ defines a linear dynamical system which is a low-rank structure.
 
 ---
 
-In [dynamic mode decomposition (DMD)](https://github.com/hanyoseob/matlab-DMD), **nonlinear dynamical system $f$** is performed to a least-square fitting into approximate linear dyanmical system using **finite dimensionanl measurements $\vec{\mathbf{x}}$**. However, since a dynamics of the finite-dimensional measurements $\vec{\mathbf{x}}$ follows the nonlinear manifold defined by nonlinear dynamical system $f$, fitting errors exist in the approximate linear dynamical system.
+In [dynamic mode decomposition (DMD)](https://github.com/hanyoseob/matlab-DMD), **nonlinear dynamical system $f$** is performed to a least-square fitting into approximate linear dynamical system using **finite dimensionanl measurements $\vec{\mathbf{x}}$**. However, since a dynamics of the finite-dimensional measurements $\vec{\mathbf{x}}$ follows the nonlinear manifold defined by nonlinear dynamical system $f$, fitting errors exist in the approximate linear dynamical system.
 
 To overcome the fitting errors, a koopman theory proposes a koopman operator $\mathcal{K}$ with observable function $g$. Now, we will construct new variable $\vec{\mathbf{y}}$ as follows:
 
@@ -47,13 +47,13 @@ $$
 \frac{d\vec{\mathbf{y}}}{dt} = \mathcal{K}\vec{\mathbf{y}}.
 $$
 
-Whereas the DMD was fomulated as **approximate linear dynamical system** in the finite-dimensional vector space $\vec{\mathbf{x}} \in \mathbb{R}^{n}$:
+Whereas the DMD was formulated as **approximate linear dynamical system** in the finite-dimensional vector space $\vec{\mathbf{x}} \in \mathbb{R}^{n}$:
 
 $$
 \frac{d\vec{\mathbf{x}}}{dt} \approx A\vec{\mathbf{x}},
 $$
 
-the koopman theory fomulates exact linear dynamical system $\frac{d\vec{\mathbf{y}}}{dt} = \mathcal{K}\vec{\mathbf{y}}$ in the infinite-dimensional function space $\vec{\mathbf{y}} = g(\vec{\mathbf{x}}) \in \mathbb{R}^{\infty}$.
+the koopman theory formulates exact linear dynamical system $\frac{d\vec{\mathbf{y}}}{dt} = \mathcal{K}\vec{\mathbf{y}}$ in the infinite-dimensional function space $\vec{\mathbf{y}} = g(\vec{\mathbf{x}}) \in \mathbb{R}^{\infty}$.
 
 ---
 
@@ -63,7 +63,7 @@ A measurement $\vec{\mathbf{x}}$ is defined as:
 
 $$\vec{\mathbf{x}} = [\mathbf{x}_1, \mathbf{x}_2]^{\rm{T}}.$$
 
-A nonlinear dynamical system $\frac{d\vec{\mathbf{x}}}{dt} = f(\vec{\mathbf{x}}, t)$ is fomulated as:
+A nonlinear dynamical system $\frac{d\vec{\mathbf{x}}}{dt} = f(\vec{\mathbf{x}}, t)$ is formulated as:
 
 $$
 \frac{d\mathbf{x}_1}{dt} = \dot{\mathbf{x}}_1 = \mu \mathbf{x}_1,
@@ -73,7 +73,7 @@ $$
 \frac{d\mathbf{x}_2}{dt} = \dot{\mathbf{x}}_2 = \lambda(\mathbf{x}_2 - \mathbf{x}_1^2).
 $$
 
-For the nonlinear dynamical system $f$ with measurement $\vec{\mathbf{x}}$, new variable $\vec\mathbf{y}$ will be constructed by using obervable function $g$ as follows:
+For the nonlinear dynamical system $f$ with measurement $\vec{\mathbf{x}}$, new variable $\vec\mathbf{y}$ will be constructed by using observable function $g$ as follows:
 
 $$
 g(\vec\mathbf{x})=\vec\mathbf{y} = [\mathbf{y}_1, \mathbf{y}_2, \mathbf{y}_3]^{\rm{T}}.
@@ -93,7 +93,7 @@ $$
 \mathbf{y}_3 = \mathbf{x}_1^2.
 $$
 
-In the koopman embedding coordinate $\vec\mathbf{y}$, its dynamical system is calcuated as follows:
+In the koopman embedding coordinate $\vec\mathbf{y}$, its dynamical system is calculated as follows:
 
 $$
 \dot{\mathbf{y}_1} = \dot{\mathbf{x}_1} = \mu \mathbf{x}_1 = \mu \mathbf{y}_1,
@@ -107,7 +107,7 @@ $$
 \dot{\mathbf{y}_3} = 2\mathbf{x}_1\dot{\mathbf{x}_1} = 2\mathbf{x}_1\mu\mathbf{x}_1 = 2\mu\mathbf{x}_1^2 = 2\mu\mathbf{y}_3.
 $$
 
-Above equations are refomulated as matrix form:
+Above equations are reformulated as matrix form:
 
 $$
 \frac{d\vec{\mathbf{y}}}{dt} =
@@ -151,7 +151,7 @@ $$
 \mathbf{y}_3 = \mathbf{x}_2^2.
 $$
 
-In the koopman embedding coordinate $\vec\mathbf{y}$, its dynamical system is calcuated as follows:
+In the koopman embedding coordinate $\vec\mathbf{y}$, its dynamical system is calculated as follows:
 
 $$
 \dot{\mathbf{y}_1} = \dot{\mathbf{x}_1} = \mu \mathbf{x}_1 = \mu \mathbf{y}_1,
@@ -183,15 +183,15 @@ Specifically, the koopman embedding is conducted for all multi fixed points. In 
 
 So far we have briefly reviewed how to linearize from a finite-dimensional nonlinear dynamical system to an infinite-dimensional linear dynamical system based on koopman theory.
 
-However, we does not cover how to find an optimal observation function $g$. Actually, it is difficult to determine the proper observation function $g$ and the observation fucntion $g$ is sensitively related to a performance of a koopman operator. Therefore, to determine the observation function $g$, we need experties in the dynamical system.
+However, we does not cover how to find an optimal observation function $g$. Actually, it is difficult to determine the proper observation function $g$ and the observation function $g$ is sensitively related to a performance of a koopman operator. Therefore, to determine the observation function $g$, we need expertise in the dynamical system.
 
 ---
 
 An algorithm is closly similar to [DMD](https://github.com/hanyoseob/matlab-DMD).
 
-First, measured vector space $\vec\mathbf{x}$ is transformed to function space $\vec\mathbf{y}$ using obervation function $g$.
+First, measured vector space $\vec\mathbf{x}$ is transformed to function space $\vec\mathbf{y}$ using observation function $g$.
 
-Next, Using the observables $\vec\mathbf{y}$, a linear dynamical system $A_Y$ is constructe as follows:
+Next, Using the observables $\vec\mathbf{y}$, a linear dynamical system $A_Y$ is constructed as follows:
 
 $$ 
 \bar{Y} = 
