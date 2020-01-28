@@ -238,5 +238,5 @@ $$
 Finally, reconstructed measurement $\vec\mathbf{x}^*$ can be transformed from the observables $\vec\mathbf{y}^*$ using inverse observation function $g^{-1}$:
 
 $$
-\vec\mathbf{y}^* = g(\vec\mathbf{x}^*) \rarr \vec\mathbf{x}^* = g^{-1}(\vec\mathbf{y})^*.
+\vec\mathbf{y}^* = g(\vec\mathbf{x}^*) \rarr \vec\mathbf{x}^* = g^{-1}(\vec\mathbf{y}^*).
 $$
